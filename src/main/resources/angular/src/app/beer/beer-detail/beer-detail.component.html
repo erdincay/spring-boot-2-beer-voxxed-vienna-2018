@@ -1,0 +1,21 @@
+<div id="beer-detail">
+  <a href="#" (click)="onSubmitted.emit()">&lt; Back to Beer List</a>
+  <br/>
+
+  <form novalidate (ngSubmit)="submit()">
+    <label>Name:
+      <input name="name" [ngModel]="selectedBeer?.name" (ngModelChange)="selectedBeer.name = $event">
+    </label>
+    <br/>
+    <label>Style:
+      <input name="style" [ngModel]="selectedBeer?.style" (ngModelChange)="selectedBeer.style = $event">
+    </label>
+    <br/>
+    <label>ABV (%):
+      <input name="abv" [ngModel]="selectedBeer?.abv" (ngModelChange)="selectedBeer.abv = $event">
+    </label>
+    <br/>
+
+    <input type="submit"/>
+  </form>
+</div>

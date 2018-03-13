@@ -1,0 +1,2 @@
+<app-beer-list #beerList [hidden]="selectedBeer" (onSelected)="onSelected($event)"></app-beer-list>
+<app-beer-detail [hidden]="!selectedBeer" [selectedBeer]="selectedBeer" (onSubmitted)="onSubmitted()"></app-beer-detail>

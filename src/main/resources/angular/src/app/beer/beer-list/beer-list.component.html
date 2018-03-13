@@ -1,0 +1,18 @@
+<div id="beer-list">
+  <h1>Beer in Stock</h1>
+  <table>
+      <tr>
+          <th>Name</th>
+          <th>Style</th>
+          <th>ABV (%)</th>
+      </tr>
+      <tr *ngFor="let beer of beers">
+          <td>{{beer.name}}</td>
+          <td>{{beer.style}}</td>
+          <td>{{beer.abv}}</td>
+          <td><a href="#" (click)="edit(beer)">Edit</a></td>
+          <td><a href="#" (click)="delete(beer)">Delete</a></td>
+      </tr>
+  </table>
+  <a href="#" (click)="add()">Add some beer</a>
+</div>
